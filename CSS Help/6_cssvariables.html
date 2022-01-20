@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Variables</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+         :root {
+            --max-width: 1100px;
+            --primary-color: steelblue;
+            --secondary-color: skyblue;
+            --light-color: lightgrey;
+        }
+        
+        .box {
+            --box-1-width: 2;
+            --box-2-width: 3;
+        }
+        
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4;
+            background: var(--light-color);
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            border-bottom: 5px var(--secondary-color) solid;
+            color: white;
+            text-align: center;
+        }
+        
+        .container {
+            display: flex;
+            margin: auto;
+            max-width: var(--max-width);
+        }
+        
+        .box {
+            background-color: var(--primary-color);
+            border-bottom: 5px var(--secondary-color) solid;
+            color: white;
+            padding: 1rem;
+            margin: 1rem;
+        }
+        
+        .box-1 {
+            flex: var(--box-1-width);
+        }
+        
+        .box-2 {
+            flex: var(--box-2-width);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS Variables</h1>
+    </header>
+    <div class="container">
+        <div class="box box-1">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illo explicabo, reprehenderit ipsa nostrum sequi.</p>
+        </div>
+        <div class="box box-2">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illo explicabo, reprehenderit ipsa nostrum sequi.</p>
+        </div>
+    </div>
+    <script src="" async defer></script>
+</body>
+
+</html>

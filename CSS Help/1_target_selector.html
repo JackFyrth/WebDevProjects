@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Targeted Selector</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        /* Direct Child */
+        
+        div>p {
+            background: grey;
+        }
+        /* Directly after */
+        
+        div+p {
+            background: hotpink;
+            color: wheat;
+        }
+        /*  By attribute */
+        
+        a[target='blank'] {
+            background: red;
+            color: wheat;
+        }
+        /* Specific attribute values */
+        
+        input [type='text'],
+        input [type='email'] {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+
+<div>
+    <p>
+        Lorem ipsum dolor sit amet.
+    </p>
+    <ul>
+        <li>Item 1</li>
+        <li>
+            <p>Item 2</p>
+        </li>
+        <li>Item 3</li>
+    </ul>
+    <p>
+        Lorem ipsum dolor sit amet.
+    </p>
+</div>
+<p>
+    Lorem ipsum dolor sit amet.
+</p>
+
+<a href="#">Page 1</a>
+<a href="#" target="_self">Page 2</a>
+<a href="https://google.com" target="_Blank">Google</a>
+
+
+<br></br>
+
+<form>
+    <input type="text" placeholder="name">
+    <input type="email" placeholder="email">
+    <input type="submit" value="submit">
+</form>
+</body>
+
+</html>

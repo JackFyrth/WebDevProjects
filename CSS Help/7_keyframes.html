@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Keyframes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            background: #333;
+        }
+        
+        .box {
+            background: white;
+            width: 200px;
+            height: 200px;
+            /*  LONG WAY */
+            position: relative;
+            animation-name: animate1;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            /*SHORT WAY */
+            animation: animate1 5s forwards 1ms ease-in-out;
+        }
+        
+        @keyframes animate1 {
+            from {
+                top: 0;
+            }
+            to {
+                width: 600px;
+                background-color: steelblue;
+                top: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+    </div>
+    <script src="" async defer></script>
+</body>
+
+</html>
